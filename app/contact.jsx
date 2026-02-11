@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet,ImageBackground} from 'react-native'
 import React from 'react'
-import {inspect} from "node:util";
+
 
 
 const contact = () => {
