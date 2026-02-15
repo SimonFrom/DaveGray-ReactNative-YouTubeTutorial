@@ -22,9 +22,6 @@ const contact = () => {
             {/*    </BlurView>*/}
             {/*</View>*/}
         </View>
-
-
-
     )
 }
 export default contact
