@@ -10,13 +10,18 @@ const app = () => {
                 source={icedCoffeeImg}
                 style={styles.image}>
             <Text style={styles.title}>Coffee Shop</Text>
-
+            <View style={styles.wrapper}>
                 <Link style={{marginHorizontal: 'auto'}} href="/contact" asChild>
                     <Pressable style={styles.button}>
                         <Text style={styles.buttonText}>Contact Us</Text>
                     </Pressable>
                 </Link>
-
+                <Link style={{marginHorizontal: 'auto'}} href="/menu" asChild>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.buttonText}>Check out our menu</Text>
+                    </Pressable>
+                </Link>
+            </View>
 
             </ImageBackground>
         </View>
@@ -36,8 +41,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'JetBrains Mono',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        marginBottom: 120,
+        marginTop: 50,
 
+    },
+    wrapper: {
+        flex: 2,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 25,
     },
     image: {
         width: '100%',
@@ -67,7 +79,7 @@ const styles = StyleSheet.create({
     },
     button: {
         height: 50,
-        width: 100,
+        width: 200,
         borderRadius: 20,
         backgroundColor: 'rgba(0, 0, 0, 0.75)',
         padding: 6,

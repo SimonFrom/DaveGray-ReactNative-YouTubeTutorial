@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, Link} from 'react-native'
 import React from 'react'
 import { BlurView } from 'expo-blur'
 
@@ -14,6 +14,15 @@ const contact = () => {
                 Coffee Lane 12{"\n"}
                 The brown state
             </Text>
+            <View style={styles.textView}>
+                <Text style={styles.text}>
+                    Phone:{'\n'}
+                    <Link href="tel:5555555555" style={styles.link}>555-555-5555</Link>{'\n'}
+                    or{' '}
+                    <Link href="sms:5555555555" style={styles.link}>Click Here to Text!</Link>
+                </Text>
+            </View>
+
             {/*<View style={styles.wrapper}>*/}
             {/*    <BlurView style={styles.card} intensity={10} tint="light">*/}
             {/*        <Text>*/}
@@ -73,5 +82,6 @@ const styles = StyleSheet.create({
         fontFamily: 'JetBrains Mono',
         backgroundColor: 'rgba(179,177,177,0.5)',
     },
+
 })
 
