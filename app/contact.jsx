@@ -1,39 +1,35 @@
-import {View, Text, StyleSheet, Link} from 'react-native'
+import {View, Text, StyleSheet } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {Link} from 'expo-router'
 import React from 'react'
-import { BlurView } from 'expo-blur'
+import {BlurView} from 'expo-blur'
 
 
-
-const contact = () => {
+export default function Contact() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.header}>Welcome to our site!</Text>
 
-            <Text style={styles.footer}>
-                Coffee Masters{"\n"}
-                Coffee Lane 12{"\n"}
-                The brown state
-            </Text>
-            <View style={styles.textView}>
-                <Text style={styles.text}>
-                    Phone:{'\n'}
-                    <Link href="tel:5555555555" style={styles.link}>555-555-5555</Link>{'\n'}
-                    or{' '}
-                    <Link href="sms:5555555555" style={styles.link}>Click Here to Text!</Link>
+            <SafeAreaView style={styles.container}>
+                <Text style={styles.header}>Welcome to our site!</Text>
+
+                <Text style={styles.footer}>
+                    Coffee Masters{"\n"}
+                    Coffee Lane 12{"\n"}
+                    The brown state{"\n"}
+                    Phone: <Link href="tel:20875552">20875552</Link>{"\n"}
                 </Text>
-            </View>
 
-            {/*<View style={styles.wrapper}>*/}
-            {/*    <BlurView style={styles.card} intensity={10} tint="light">*/}
-            {/*        <Text>*/}
-            {/*            Hello there*/}
-            {/*        </Text>*/}
-            {/*    </BlurView>*/}
-            {/*</View>*/}
-        </View>
+
+                {/*<View style={styles.wrapper}>*/}
+                {/*    <BlurView style={styles.card} intensity={10} tint="light">*/}
+                {/*        <Text>*/}
+                {/*            Hello there*/}
+                {/*        </Text>*/}
+                {/*    </BlurView>*/}
+                {/*</View>*/}
+            </SafeAreaView>
+
     )
 }
-export default contact
 
 
 const styles = StyleSheet.create({
@@ -41,37 +37,14 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
     },
-    wrapper: {
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        borderRadius: 20,
-        overflow: 'hidden',
-    },
-
-    card: {
-        padding: 16,
-        backgroundColor: 'rgba(255,255,255,0.04)',
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'rgba(255,255,255,0.25)',
-
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 8},
-        shadowOpacity: 0.15,
-        shadowRadius: 18,
-        width: 150,
-
-        elevation: 6, // Android
-    },
     header: {
         fontSize: 46,
         color: 'white',
         textAlign: 'center',
         marginBottom: "auto",
-        marginTop: "25%",
+        marginTop: 10,
         fontFamily: 'JetBrains Mono',
-        backgroundColor: 'rgba(179,177,177,0.5)',
+        backgroundColor: 'rgba(255,146,33,0.5)',
     },
     footer: {
         fontSize: 25,
@@ -80,7 +53,7 @@ const styles = StyleSheet.create({
         marginBottom: "3%",
         marginTop: "auto",
         fontFamily: 'JetBrains Mono',
-        backgroundColor: 'rgba(179,177,177,0.5)',
+        backgroundColor: 'rgba(255,146,33,0.5)',
     },
 
 })
